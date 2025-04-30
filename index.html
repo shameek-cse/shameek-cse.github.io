@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Portfolio</title>
+  <title>Shameek Bhattacharya - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background: #f4f4f4;
-      color: #333;
     }
     header {
       background: #2c3e50;
@@ -17,56 +16,133 @@
       padding: 2rem;
       text-align: center;
     }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav button:hover, nav button.active {
+      background: #1abc9c;
+    }
+    .tab-content {
+      display: none;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      margin-top: 0;
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9em;
       background: #eee;
-    }
-    a {
-      color: #3498db;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Tech Enthusiast</p>
+    <h1>Shameek Bhattacharya</h1>
+    <p>Assistant Professor | Computer Science & Engineering</p>
+    <p>Email: <a href="mailto:shameek@protonmail.com" style="color: #ecf0f1;">shameek@protonmail.com</a> | 📞 +91-9830452026</p>
   </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello! I'm <strong>Your Name</strong>, a passionate web developer with a love for creating clean and responsive designs. I enjoy learning new technologies and building projects that solve real problems.</p>
-    </section>
+  <nav>
+    <button class="tablink active" onclick="openTab(event, 'about')">About</button>
+    <button class="tablink" onclick="openTab(event, 'education')">Education</button>
+    <button class="tablink" onclick="openTab(event, 'experience')">Experience</button>
+    <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'skills')">Skills</button>
+    <button class="tablink" onclick="openTab(event, 'publications')">Publications</button>
+    <button class="tablink" onclick="openTab(event, 'certifications')">Certifications</button>
+  </nav>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Portfolio Website</strong> – A showcase of my design and coding projects.</li>
-        <li><strong>Blog Template</strong> – A simple blog layout using HTML and CSS.</li>
-      </ul>
-    </section>
+  <div id="about" class="tab-content active">
+    <h2>About Me</h2>
+    <p>I am a passionate educator and researcher in Computer Science with over a decade of academic experience. I specialize in computer networks, algorithms, and the digital transformation of industries.</p>
+  </div>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    </section>
-  </main>
+  <div id="education" class="tab-content">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>M.Tech in CSE</strong>, MCKV Institute of Engineering – DGPA: 7.79</li>
+      <li><strong>B.Tech in IT</strong>, Saroj Mohan Institute of Technology – CGPA: 7.15</li>
+      <li><strong>Higher Secondary</strong>, WBCHSE – 48.5%</li>
+      <li><strong>Madhyamik</strong>, WBBSE – 70%</li>
+    </ul>
+  </div>
+
+  <div id="experience" class="tab-content">
+    <h2>Professional Experience</h2>
+    <ul>
+      <li><strong>MIET (2024–Present)</strong>: CN, DAA</li>
+      <li><strong>PITM Kolkata (2022–2024)</strong>: Paper setter, mentor</li>
+      <li><strong>DSMS Durgapur (2017–2022)</strong>: OS, DBMS, IT admin</li>
+      <li><strong>VITM Buxar (2015–2017)</strong>: Lab setup, networking</li>
+      <li><strong>HN College, Kalyani (2013–2015)</strong>: MAKAUT inspection support</li>
+    </ul>
+  </div>
+
+  <div id="projects" class="tab-content">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Online Shopping Mall</strong> – Java-based e-commerce simulation.</li>
+      <li><strong>Moving Object Detection</strong> – MATLAB-based motion analysis.</li>
+    </ul>
+  </div>
+
+  <div id="skills" class="tab-content">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Languages: C, C++, Java, MATLAB, Python, SQL</li>
+      <li>OS: Windows, Linux, BSD</li>
+      <li>Networking: Network Programming with C, Cisco L2</li>
+    </ul>
+  </div>
+
+  <div id="publications" class="tab-content">
+    <h2>Publications</h2>
+    <p>Bhattacharya, S. (2025). <em>Beyond Velocity</em>, Journal of Software Engineering, 3(1), 1–5.  
+    <a href="https://doi.org/10.34218/JSE_03_01_001" target="_blank">Read More</a></p>
+  </div>
+
+  <div id="certifications" class="tab-content">
+    <h2>Certifications & FDPs</h2>
+    <ul>
+      <li>Data Analytics using ML – BIT Mesra (June 2024)</li>
+      <li>Generative AI in Research – SNU Kolkata (May 2024)</li>
+    </ul>
+  </div>
 
   <footer>
-    © 2025 Your Name
+    © 2025 Shameek Bhattacharya | Bhadrakali, West Bengal
   </footer>
+
+  <script>
+    function openTab(evt, tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.tablink');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
