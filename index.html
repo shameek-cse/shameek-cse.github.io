@@ -54,7 +54,40 @@
       padding: 1rem;
       background: #eee;
     }
+    /* New button styles */
+    .profile-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .profile-btn {
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    .profile-btn:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+    .profile-btn.scholar {
+      background: #4285f4;
+    }
+    .profile-btn.orcid {
+      background: #a6ce39;
+    }
+    .profile-btn i {
+      margin-right: 8px;
+    }
   </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -64,6 +97,16 @@
     <a href="Resume_Shameek.pdf" download style="display:inline-block;margin-top:1rem;padding:0.5rem 1rem;background:#1abc9c;color:white;text-decoration:none;border-radius:5px;">
       ⬇ Download Resume
     </a>
+    
+    <!-- Added profile links -->
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=hee3uwcAAAAJ&hl=en" target="_blank" class="profile-btn scholar">
+        <i class="fab fa-google"></i> Google Scholar
+      </a>
+      <a href="https://orcid.org/my-orcid?orcid=0009-0003-6024-0727" target="_blank" class="profile-btn orcid">
+        <i class="fab fa-orcid"></i> ORCID Profile
+      </a>
+    </div>
   </header>
 
   <nav>
